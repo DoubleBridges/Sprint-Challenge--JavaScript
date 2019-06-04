@@ -30,13 +30,38 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    .forEach mutates the original array, .map returns a new array
+
 2. What is the difference between a function and a method?
+
+    a method is a function that is internal to a class, i.e. a property of that class, that is used to perform a function on an object belonging to that class
 
 3. What is closure?
 
+    When a function is executed, the variables within the scope of that function are created, used, and then cease to exist when the function completes. When you place a function inside
+    another function, it has access to three scopes. It's own, the outer function's, and global. Since it has access to the outer function's variables it is able to preserve those values and use them. Even if the outer function has already been executed.
+
 4. Describe the four rules of the 'this' keyword.
 
+   1. Function being called by `new`, constructor
+      creates a new object with all of the properties of the template obj (inheritance), sets the reference for _this_
+
+  2. Function called by call(), apply(), bind()/ explicit binding
+      forcing a fuction to call a particular obj w/out putting a property reference on it
+      apply will allow you to pass an array
+      bind creates a new function that will act as the original but with _this_ predefined
+
+
+  3. Function called as a method/ implicit binding
+      this refers to whatever preceeds the .
+
+  4. Function called globally, default binding
+      If you call `this` globally it binds to the window by default. It will pick up globally declared
+      variables though, since window is the default object.
+
 5. Why do we need super() in an extended class?
+
+    super() is how you inhereit all of the properties and methods from the parent class
 
 ## Project Set up
 
